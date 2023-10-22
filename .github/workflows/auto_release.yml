@@ -1,0 +1,34 @@
+name: AutoRelease
+
+on:
+  push:
+    tags:
+    - '*'
+
+jobs:
+  release:
+    permissions:
+      contents: write
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Install .NET 7.0
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '7.0.x'
+      - name: Build
+        shell: bash
+        run: |
+          dotnet restore
+          dotnet build
+          dotnet publish -c Release FutatabiDownhill.csproj
+          find .
+      - name: Release
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: ./bin/Release/net7.0/win-x64/publish/FutatabiDownhill.exe
+
+# dotnet publish FutatabiDownhill.csproj --runtime win-x64 --self-contained

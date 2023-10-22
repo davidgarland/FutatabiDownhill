@@ -10,10 +10,10 @@ for [Assetto Corsa](https://store.steampowered.com/app/244210/Assetto_Corsa/).
 First, download the original track from RaceDepartment [here](https://www.racedepartment.com/downloads/90s-golden-drift-spot-project-7-mountain-futatabi-%E5%86%8D%E5%BA%A6%E5%B1%B1.22990/).
 Install it as usual, either via [Content Manager](https://assettocorsa.club/content-manager.html) or manually.
 
-Once that's done, download this program from the releases page. Run the .exe.
+Once that's done, download the program from the [releases](https://github.com/davidgarland/FutatabiDownhill/releases) page. Run the .exe.
 
 If your Assetto Corsa install is at `C:\Program Files (x86)\Steam\steamapps\common\assettocorsa`, the program will automatically find futatabi and patch it.
-Otherwise, you will be prompted to give the path to futatabi.
+Otherwise, you will be prompted to give the path to your assettocorsa install.
 
 ## How It Works
 
