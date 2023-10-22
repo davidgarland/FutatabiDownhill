@@ -1,0 +1,23 @@
+{
+  "name": "Futatabi",
+  "description": "Famous racing/drifting spot in Kobe, West Japan",
+  "tags": [
+    "",
+    "#a2b",
+    "#drift",
+    "Japan",
+    "circuit",
+    "Touge",
+    "Outbound"
+  ],
+  "country": "Japan",
+  "city": "Kobe city",
+  "length": "5.1km",
+  "width": "6-17m",
+  "pitboxes": "16",
+  "run": "racing point to point",
+  "author": "90s Gold Drift Spot Project",
+  "version": "1.0",
+  "url": "https://www.facebook.com/90SDRIFTAC/",
+  "year": 2018
+}
