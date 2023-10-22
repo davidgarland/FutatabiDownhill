@@ -17,14 +17,21 @@ Otherwise, you will be prompted to give the path to your assettocorsa install.
 
 ## How It Works
 
-This program uses [Octodiff](https://github.com/OctopusDeploy/Octodiff) delta files, which can be applied to the existing
-files to obtain the patched versions. All such delta files and other resources can be found in the `Resources` directory
-of this project.
+For the most part, this program just moves around files and injects some custom ones-- if it only had to do that, I would have
+just gone ahead and written this as a powershell script instead.
+
+But because we don't want to distribute the `.kn5` for Futatabi Downhill, instead we use an [Octodiff](https://github.com/OctopusDeploy/Octodiff)
+delta file. This delta file basically says what changes need to be made to the normal `futatabi.kn5` to generate `futatabi downhill.kn5`.
 
 ## But Why?
 
 We aren't allowed to redistribute the track (because it takes away traffic from the original download), and 90sGDSP has no interest in adding the downhill
 layout to their upload of the track. This program solves that problem, and as a bonus takes even less network usage to download assuming you already have the original.
+
+To give you a sense of how efficient this solution is:
+- `FutatabiDownhill.exe` is 104MB.
+- `futatabi downhill.kn5` is 270MB.
+- `futatabi.zip` (the original one) is 215MB.
 
 The program is made open source for those who are curious how it works. Everything fits snugly into `Program.cs`, and can be
 understood without much difficulty.
